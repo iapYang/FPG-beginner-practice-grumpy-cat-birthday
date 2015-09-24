@@ -1,0 +1,116 @@
+@import "less/common";
+@import "less/custom";
+
+/*============= Main CSS =============*/
+.preload img{ 
+    width: 100%; 
+    height: auto; 
+}
+
+.lt-ie9{
+    .ie8_hidden{
+        visibility: hidden; 
+    }
+}
+
+#ad_choices{
+    background-color: rgba(255,255,255,0.99) !important;
+}
+.wrapper-container{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.wrapper-1280{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+body, .leavebehind, .interactive {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.leavebehind, .interactive{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.leavebehind{
+    height: 90px;
+    visibility: hidden;
+    background-color: #1abc9c;
+    .icon{
+        background-color: red;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        position: absolute;
+    }
+}
+
+.interactive{
+    height: 100%;
+    background-color: #3498db;
+
+    .interactive-container{
+        height: 100%;
+    }
+}
+
+.video-container{
+    width: 60%;
+}
+
+.mobile{
+    .leavebehind{
+        height: 50px;
+    }
+}
+
+
+
+
+.iphone{
+    @media screen and (max-height:630px){
+        //iphone6 plus
+    }
+    @media screen and (max-height:561px){
+        //iphone6
+    }
+    @media screen and (max-height:470px){
+        //iphone5/5s ios8
+    }
+}
+
+
+.s3{
+    .interactive{
+
+    }
+}
+
+.s4{
+    .interactive{
+
+    }
+}
+
+.s5{
+    .interactive{
+        
+    }
+}

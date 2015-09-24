@@ -1,0 +1,14 @@
+{
+  "name": "zipTest",
+  "version": "0.0.1",
+  "description": "test zip",
+  "main": "main.js",
+  "dependencies": {
+    "rd": "^0.0.2",
+    "easy-zip": "latest",
+    "pretty-data": "latest"
+  },
+  "devDependencies": {},
+  "author": "VanyZ",
+  "license": "ISC"
+}

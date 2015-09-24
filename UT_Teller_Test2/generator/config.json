@@ -1,0 +1,11 @@
+{
+	"auto": true,
+	"batch": false,
+	"targetDir": false,
+	"backup": true,
+	"nameOnly": false,
+	"targetFilter": ".html|.css|.js",
+	"targetFile": ["style.less", "index.html", "app.js"],
+	"imageDir": "img",
+	"imageFilter": ".gif|.png|.jpg"
+}

@@ -1,0 +1,528 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body,
+div,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  display: block;
+  border: 0;
+  width: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+.clear_both {
+  clear: both;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+a {
+  text-decoration: none;
+}
+a:active,
+a:focus,
+input {
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+/*============= Reset =============*/
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+/*============= End Reset =============*/
+#ut_close,
+#ut_open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  cursor: pointer;
+  width: 47px;
+  height: 47px;
+  visibility: hidden;
+}
+#ut_close img,
+#ut_open img {
+  width: 100%;
+  height: 100%;
+}
+body.closed #ut_close,
+body.opened #ut_open {
+  visibility: hidden;
+}
+body.opened #ut_close,
+body.closed #ut_open {
+  visibility: visible;
+}
+#ut_close {
+  visibility: visible;
+}
+#ut_close.rotate-ani,
+#ut_open.rotate-ani {
+  -webkit-animation: btn-rotating 0.4s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -moz-animation: btn-rotating 0.4s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -o-animation: btn-rotating 0.4s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  animation: btn-rotating 0.4s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+}
+#ut_close.opacity-ani,
+#ut_open.opacity-ani {
+  -webkit-animation: btn-opacity 0.8s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -moz-animation: btn-opacity 0.8s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -o-animation: btn-opacity 0.8s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  animation: btn-opacity 0.8s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+}
+.placeholder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f8f6f4;
+  z-index: 9999;
+  text-align: center;
+  display: none;
+  font-size: 0;
+}
+.placeholder .plzrotate {
+  display: inline-block;
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+  font-size: 12px;
+  position: relative;
+}
+.placeholder .plzrotate .logo {
+  position: relative;
+  margin: 0 auto;
+}
+.placeholder .plzrotate .rotate {
+  position: relative;
+  top: 5px;
+  color: #7d7d7d;
+}
+.placeholder .plzrotate .spinner {
+  position: relative;
+  top: 15px;
+  width: 17px;
+  margin: 0 auto;
+  -webkit-animation: rotating 2s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite alternate;
+  -moz-animation: rotating 2s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite alternate;
+  -o-animation: rotating 2s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite alternate;
+  animation: rotating 2s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite alternate;
+}
+.placeholder:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.vhcenter {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.btn-container {
+  position: relative;
+}
+.btn-container .normal {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.btn-container .hover {
+  width: 100%;
+}
+@media screen and (max-height: 640px) and (orientation: landscape) {
+  .mobile .placeholder {
+    display: block;
+  }
+  body.closed .placeholder {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) {
+  .mobile.android .interactive {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 600px) and (orientation: landscape) {
+  .s3 .wrapper-1280 {
+    max-height: 360px;
+  }
+}
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+  }
+}
+@-moz-keyframes rotating {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(90deg);
+  }
+}
+@-o-keyframes rotating {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(90deg);
+  }
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes btn-rotating {
+  0% {
+    -webkit-transform: rotate(-45deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(90deg) translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes btn-rotating {
+  0% {
+    -moz-transform: rotate(-45deg);
+  }
+  100% {
+    -moz-transform: rotate(90deg);
+  }
+}
+@-o-keyframes btn-rotating {
+  0% {
+    -o-transform: rotate(-45deg);
+  }
+  100% {
+    -o-transform: rotate(90deg);
+  }
+}
+@keyframes btn-rotating {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes btn-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes btn-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes btn-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes btn-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.utvp_player_frame,
+.utvp_video,
+.utvp_slate,
+.utvp_cover,
+.utvp_play_toggle_wrapper_insert {
+  background-color: rgba(0, 0, 0, 0.01) !important;
+}
+/* play button container */
+.utvp_player_frame,
+object {
+  width: 100% !important;
+  height: 100% !important;
+}
+.utvp_play_toggle {
+  opacity: 1 !important;
+}
+/* video height */
+.utvp_player_frame,
+.utvp_video {
+  height: auto !important;
+}
+video {
+  height: auto !important;
+}
+.video {
+  width: 100.2%!important;
+}
+/* time */
+.utvp_time_current,
+.utvp_time_duration {
+  display: none !important;
+}
+/* sound progress */
+.utvp_volume_slider {
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -moz-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  -o-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+.utvp_controls.full .utvp_volume_bar {
+  height: 9px !important;
+  top: 11px !important;
+}
+/* global */
+.utvp_player_frame {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  height: 100% !important;
+}
+.utvp_controls,
+.picture-holder,
+.utvp_play_toggle,
+.utvp_buffer_wrapper,
+.utvp_slate,
+.utvp_player_frame {
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -moz-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  -o-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+/* play button */
+.icon-play-toggle:before {
+  content: '' !important;
+  position: absolute !important;
+  background: url(video/skin/playBtn.png) center center no-repeat !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 94px !important;
+  height: 94px !important;
+  margin: -47px 0 0 -47px !important;
+  opacity: 1 !important;
+  background-size: 100% 100%!important;
+}
+.desktop .utvp_play_toggle_wrapper:hover .icon-play-toggle:before {
+  background-image: url(video/skin/playOver.png) !important;
+}
+.desktop .videoComplete .icon-play-toggle:before {
+  background-image: url(video/skin/replayBtn.png) !important;
+}
+.desktop .videoComplete .utvp_play_toggle_wrapper:hover .icon-play-toggle:before {
+  background-image: url(video/skin/replayOver.png) !important;
+}
+.desktop .utvp_control_bar_buttons:hover {
+  color: #e74c3c!important;
+}
+.mobile .utvp_controls.full .utvp_progress_bar {
+  width: 80% !important;
+}
+.tablet .utvp_controls.full .utvp_progress_bar {
+  width: 85% !important;
+}
+.iphone .utvp_controls {
+  display: none !important;
+}
+/* play button */
+.utvp_control_bar_buttons {
+  color: #e67e22!important;
+}
+/* progress bar */
+.utvp_progress_down {
+  background-color: #34495e!important;
+}
+.utvp_progress_current {
+  background-color: #7cc343 !important;
+}
+.full.utvp_controls .utvp_progress_bar {
+  width: 76% !important;
+  height: 10px !important;
+}
+.minimal.utvp_controls .utvp_progress_bar {
+  display: none !important;
+}
+.iphone .utvp_controls {
+  display: none;
+}
+/* sound progress */
+.utvp_controls.full .utvp_volume_slider {
+  background-color: #ccc;
+}
+.utvp_controls.full .utvp_volume_bar {
+  background-color: #333;
+}
+@media only screen and (max-width: 600px) {
+  .full.utvp_controls .utvp_progress_bar {
+    width: 68% !important;
+    height: 10px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .icon-play-toggle:before {
+    width: 50px !important;
+    height: 50px !important;
+    margin: -25px 0 0 -25px !important;
+    background-image: url(video/skin/mobilePlayBtn.png) !important;
+  }
+  .videoComplete .icon-play-toggle:before {
+    background-image: url(video/skin/mobileReplayBtn.png) !important;
+  }
+}
+/*============= Main CSS =============*/
+.preload img {
+  width: 100%;
+  height: auto;
+}
+.lt-ie9 .ie8_hidden {
+  visibility: hidden;
+}
+#ad_choices {
+  background-color: rgba(255, 255, 255, 0.99) !important;
+}
+.wrapper-container {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.wrapper-1280 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+body,
+.leavebehind,
+.interactive {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: hidden;
+  position: relative;
+}
+.leavebehind,
+.interactive {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.leavebehind {
+  height: 90px;
+  visibility: hidden;
+  background-color: #1abc9c;
+}
+.leavebehind .icon {
+  background-color: red;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  position: absolute;
+}
+.interactive {
+  height: 100%;
+  background-color: #3498db;
+}
+.interactive .interactive-container {
+  height: 100%;
+}
+.video-container {
+  width: 60%;
+}
+.mobile .leavebehind {
+  height: 50px;
+}

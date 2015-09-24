@@ -1,0 +1,148 @@
+{
+    "animation": [      
+        {
+            "container": ".logo",  
+            "allAnimate": [{        
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1,
+                    "delay": 0.5,
+                    "onComplete":true   
+                },
+                "duration": 0.8,
+                "onCompleteName":"logoEnd"  
+            }]
+        }, {
+            "container": ".item1",
+            "allAnimate": [{
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1,
+                    "delay": 5.3
+                },
+                "duration": 0.3
+            }, {
+                "animateWay": "fromTo",
+                "params1": {
+                    "rotation": "-3deg"
+                },
+                "params2": {
+                    "rotation": "3deg",
+                    "repeat": -1,
+                    "yoyo": true
+                },
+                "duration": 0.2
+            }]
+        }, {
+            "container": ".item12",
+            "allAnimate": [{
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1,
+                    "delay": 6.6
+                },
+                "duration": 0.3
+            }, {
+                "animateWay": "fromTo",
+                "params1": {
+                    "rotation": "-3deg"
+                },
+                "params2": {
+                    "rotation": "3deg",
+                    "repeat": -1,
+                    "yoyo": true
+                },
+                "duration": 0.2
+            }]
+        }, {
+            "container": ".item13",
+            "allAnimate": [{
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1,
+                    "delay": 6.4
+                },
+                "duration": 0.3
+            }, {
+                "animateWay": "fromTo",
+                "params1": {
+                    "rotation": "-3deg"
+                },
+                "params2": {
+                    "rotation": "3deg",
+                    "repeat": -1,
+                    "yoyo": true
+                },
+                "duration": 0.2
+            }]
+        }, {
+            "container": ".item14",
+            "allAnimate": [{
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1,
+                    "delay": 6.7
+                },
+                "duration": 0.3
+            }, {
+                "animateWay": "fromTo",
+                "params1": {
+                    "rotation": "-3deg"
+                },
+                "params2": {
+                    "rotation": "3deg",
+                    "repeat": -1,
+                    "yoyo": true
+                },
+                "duration": 0.2
+            }]
+        }, {
+            "container": ".frame3",
+            "allAnimate": [{
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1,
+                    "delay": 8,
+                    "onStart":true
+                },
+                "duration": 0.5,
+                "onStartName":"frame3Start"
+            }, {
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 0,
+                    "delay": 10
+                },
+                "duration": 0.2
+            }]
+        }
+    ],
+    "localEvent": [     
+        {
+            "originContainer": ".done",     
+            "targets": [{                    
+                "targetName": ".frame3",
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 1
+                },
+                "duration": 0.5,
+                "extendFun":"doneExtend"        
+            }],
+            "eventName": "click",           
+            "trackName": "DONE_BUTTON"      
+        },{
+            "originContainer": ".frame3",
+            "targets": [{
+                "targetName": ".frame3",
+                "animateWay": "to",
+                "params": {
+                    "autoAlpha": 0
+                },
+                "duration": 0.2
+            }],
+            "eventName": "click",
+            "trackName": null
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 {
-  "name": "fpg-beginner-practice-galaxy-s5",
+  "name": "fpg-beginner-practice-grumpy-cat-birthday",
   "version": "1.0.0",
-  "description": "first UT forever, simply for galaxy 5",
+  "description": "This is the second UT, simply for canvas aniamtion.",
   "main": "index.js",
   "scripts": {
     "gh": "node conf/deploy"
